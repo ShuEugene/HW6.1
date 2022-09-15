@@ -2,19 +2,25 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println();
-//  ДЗ 6.1.1,2,3
+//  ДЗ 6.1.1,2,3,4
         {
-            int[] integerNumbers = new int[3];
+            int[] integerNumbers = new int[3]; // ДЗ 1
             for (int i = 0; i < 3; i++) integerNumbers[i] = i+1;
             float[] floatNumbers = {1.57f, 7.654f, 9.986f};
             String[] wordArray = {"Мой", "первый", "строковый", "Java-массив"};
-            showArray(integerNumbers);
+            showArray(integerNumbers); // ДЗ 2
             showArray(floatNumbers);
             showArray(wordArray);
             System.out.println();
-            showReverseArray(integerNumbers);
+            showReverseArray(integerNumbers); // ДЗ 3
             showReverseArray(floatNumbers);
             showReverseArray(wordArray);
+            System.out.println();
+            for (int i = 0; i < integerNumbers.length; i++) // ДЗ 4
+                if (integerNumbers[i] % 2 != 0) integerNumbers[i] = integerNumbers[i] + 1;
+            System.out.print("Целочисленный массив, значения элементов которого приведены к чётности " +
+                    "путём увеличения на \"1\": ");
+            showArray(integerNumbers);
         }
 
         System.out.println();
